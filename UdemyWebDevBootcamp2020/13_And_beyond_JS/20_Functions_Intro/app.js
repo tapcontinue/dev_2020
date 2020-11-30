@@ -97,19 +97,44 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 
 // * Quiz 5
 
-function sumArray(amount) {
-    let total = 0;
-    for (let i = 0; i < amount.length; ++i) {
-        total += amount[i];
-    }
-    return total;
-}
-
-console.log(sumArray([1, 2, 3]))
-console.log(sumArray([2, 2, 2, 2]))
-console.log(sumArray([50, 50, 1]))
+// function sumArray(amount) {
+//     let total = 0;
+//     for (let i = 0; i < amount.length; ++i) {
+//         total += amount[i];
+//     }
+//     return total;
+// }
+//
+// console.log(sumArray([1, 2, 3]))
+// console.log(sumArray([2, 2, 2, 2]))
+// console.log(sumArray([50, 50, 1]))
 
 // * Quiz 6
-// function return day() {
+// function returnDay(day) {
+//     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 //
+//     if (day < 1 || day > 7) {
+//         return null;
+//     } else if (day == 1) {
+//         return days[0]
+//     }else if (day == 2) {
+//         return days[1]
+//     }else if (day == 3) {
+//         return days[2]
+//     }else if (day == 4) {
+//         return days[3]
+//     }else if (day == 5) {
+//         return days[4]
+//     }else if (day == 6) {
+//         return days[5]
+//     }else if (day == 7) {
+//         return days[6]
+//     }
 // }
+//
+// console.log(returnDay(1));
+// console.log(returnDay(7));
+// console.log(returnDay(4));
+// console.log(returnDay(0));
+
+// *209. What Matters In This Section
