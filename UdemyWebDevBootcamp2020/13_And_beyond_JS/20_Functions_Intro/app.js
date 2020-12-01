@@ -109,7 +109,7 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 // console.log(sumArray([2, 2, 2, 2]))
 // console.log(sumArray([50, 50, 1]))
 
-// * Quiz 6
+// * Quiz 6 - array
 // function returnDay(day) {
 //     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 //
@@ -136,5 +136,51 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 // console.log(returnDay(7));
 // console.log(returnDay(4));
 // console.log(returnDay(0));
+
+// * Quiz 6 dictionary
+
+// function returnDay(day) {
+//
+//     let dict = {
+//     1: 'Monday',
+//     2: 'Tuesday',
+//     3: 'Wednesday',
+//     4: 'Thursday',
+//     5: 'Friday',
+//     6: 'Saturday',
+//     7: 'Sunday',
+// }
+//
+// if (day < 1 || day > 7){
+//     return null;
+// } else if (day == 1){
+//     return dict[1]
+// }else if (day == 2){
+//     return dict[2]
+// }else if (day == 3){
+//     return dict[3]
+// }else if (day == 4){
+//     return dict[4]
+// }else if (day == 5){
+//     return dict[5]
+// }else if (day == 6){
+//     return dict[6]
+// }else if (day == 7){
+//     return dict[7]
+// }
+//
+// }
+//
+// console.log(returnDay(0))
+// console.log(returnDay(1))
+// console.log(returnDay(2))
+// console.log(returnDay(3))
+// console.log(returnDay(4))
+// console.log(returnDay(5))
+// console.log(returnDay(6))
+// console.log(returnDay(7))
+// console.log(returnDay(8))
+
+
 
 // *209. What Matters In This Section
