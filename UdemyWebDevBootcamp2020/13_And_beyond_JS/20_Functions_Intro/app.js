@@ -183,4 +183,71 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 
 
 
-// *209. What Matters In This Section
+// *210. Function Scope
+
+//* 212. Lexical Scope - nested or inner func has access same stuff as parent or g parent
+
+// function bankRobbery() {
+//     const heroes = ['Spider-Man', 'Wolverine', 'Black Panther', 'Bat-woman'];
+//     function cryForHelp() {
+//         function inner() {
+//         for (let hero of heroes){
+//             console.log(`Please help ${hero.toUpperCase()}`)
+//             }
+//         }
+//         inner()
+//     }
+//     cryForHelp();
+// }
+//
+// bankRobbery()
+
+//* 213. Function Expressions another way to def a fun
+
+// * Function statement:
+// function add(x, y) {
+//     return x + y
+// }
+
+// * Function expression - store a function in a variable.
+
+// * Example 1
+// const square = function (num) {
+//     return console.log(num * num)
+// }
+//
+// square(9);
+
+//! functions are values in JS
+
+//* 214. Higher Order Functions
+//* function that accept functions as arguments
+
+// * Ex 1
+// function callTwice(func) {
+//     func();
+//     func();
+// }
+//
+// function laugh() {
+//     console.log('HAHAHAHAHAHAH');
+// }
+//
+// callTwice(laugh)
+
+// * Ex 2
+
+
+// function callTwice(func) {
+//     func();
+//     func();
+// }
+//
+//
+// function rollDie(){
+//     const roll = Math.floor(Math.random() * 6) + 1
+//     console.log(roll)
+// }
+// callTwice(rollDie)
+
+//* 215. Returning Functions
