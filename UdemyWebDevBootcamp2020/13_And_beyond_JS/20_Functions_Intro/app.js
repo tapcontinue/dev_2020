@@ -419,3 +419,201 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 
 // * Example 2
 
+// function yell(msg){
+//     try {
+//         console.log(msg.toUpperCase().repeat(3))
+//     } catch (e) {
+//         console.log(e);
+//         console.log('Plz pass a string');
+//     }
+// }
+//
+// yell('hello')
+// yell(111)
+
+//! Section 22: Callbacks & Array Methods
+
+//* For EACH - (kinda legacy as for-of can do the same thing)
+// Calls the func ONCE per element in the array.
+
+// * Example 1
+// const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// nums.forEach(function (n){
+//     console.log(n * n)
+// });
+//
+// console.log('');
+//
+// nums.forEach(function (el){
+//     if (el % 2 == 0){
+//         console.log(el)
+//     }
+// })
+//
+
+// * Example 2
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+// ForEach
+// numbers.forEach(function (el){
+//     console.log(el)
+// })
+
+// Same thing in a ForOf
+// for (let i of numbers) {
+//     console.log(i)
+// }
+
+// * Example 3
+
+// const movies = [
+//     {
+//         title: 'Amadeus',
+//         score: 99
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 85
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 100
+//     },
+//     {
+//         title: 'Alien',
+//         score: 90
+//     },
+//
+// ]
+
+//We want to print something like 'Alien 90/100'
+
+//*For-each version:
+// movies.forEach(function (movie){
+//     console.log(`${movie.title} - ${movie.score}`)
+// })
+
+
+//* For-of version:
+// for (const movie of movies) {
+//     console.log(`${movie.title} - ${movie.score}/100`)
+// }
+
+
+//* MAP - makes new array with the resutls of calling a callback on every element in the array
+
+
+//* Example 1:
+// const texts = ['rolf', 'lol', 'omg', 'ttyl'];
+// const caps = texts.map(function (t){
+//     return t.toUpperCase()
+// })
+//
+// console.log(texts);
+// console.log(caps);
+
+// * Example 2:
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+//
+// const doubles = numbers.map(function (num){
+//     return num * 2;
+// })
+//
+// console.log(doubles)
+
+// * Example 3 - make array of movie titles:
+
+// const movies = [
+//     {
+//         title: 'Amadeus',
+//         score: 99
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 85
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 100
+//     },
+//     {
+//         title: 'Alien',
+//         score: 90
+//     },
+//
+// ]
+//
+// const titles = movies.map(function (movie){
+//     return movie.title.toUpperCase();
+// })
+//
+// console.log(titles)
+
+//! QUIZ!
+
+//* Take 1 - Before Arrow functions (my code failed!)
+// names = (['   Timothee', '    darth_hater', 'sassyfrassy   ', 'elton john   '])
+//
+// const cleanNames = names.map(function (names){
+//     return names.trim();
+// })
+//
+// console.log(cleanNames)
+
+// * Take 2 - After arrow functions
+
+//Coming soon
+
+//* 223. Intro to Arrow Functions
+
+//* Example 1: More compact, same thing.
+// const square = (x) => {
+//  return x * x;
+// };
+//
+// const sum = (x, y) => {
+//  return x + y;
+// };
+//
+// console.log(square(4))
+// console.log(sum(4, 8))
+
+//* Example 2 - no paramater? Gotta pass empty ()
+// const rolled = () => {
+//     return Math.floor(Math.random() * 6) + 1
+// }
+//
+// console.log(rolled())
+
+//* Example 3: Only 1 argument () is optional
+// const square = x => {
+//  return x * x;
+// };
+//
+// console.log(square(9))
+
+//! QUIZ!
+
+// const greet = (name) => {
+//  return `Hello ${name}`;
+// };
+//
+// console.log(greet('Luna'))
+
+//* 224. Arrow Function Implicit Returns
+
+//* Ex 0 - regular function expression
+// const isEven = function (num){
+//     return num % 2 === 0;
+// }
+
+//* Ex 1 - implicit return. No () or {}
+// const isEven = num =>(
+//     num % 2 === 0
+// )
+
+//* Ex 2 - 1 liner
+// const isEven = num => num % 2 === 0;
+// console.log(isEven(5))
+
