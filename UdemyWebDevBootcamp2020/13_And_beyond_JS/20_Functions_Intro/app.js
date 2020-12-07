@@ -251,3 +251,171 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 // callTwice(rollDie)
 
 //* 215. Returning Functions
+
+//* EX 1
+// function makeMysteryFunc() {
+//     const rand = Math.random();
+//     if (rand > 0.5){
+//         return function (){
+//             console.log('Congrats!')
+//         }
+//     } else{
+//         return function (){
+//             alert('You are infected!')
+//         }
+//     }
+// }
+//
+// makeMysteryFunc(.3)
+
+//* Ex 2 - Is this number between 50 & 100?
+
+// function isBetween(num) {
+//     return num >=50 && num <= 100;
+// }
+// console.log(isBetween(51))
+
+
+//* Ex - 3
+// function isBetween(num) {
+//     return num >= 50 && num <= 100
+// }
+//
+// function isBetween2(num) {
+//     return num >= 1 && num <= 10
+// }
+//
+// console.log(isBetween2(51))
+
+// * Ex 4 - Factory function - Return a fun as a value
+
+// function makeBetweenFunc(min, max) {
+//     return function(num){
+//         return num >= min && num <=max;
+//     }
+// }
+//
+// const isChild = makeBetweenFunc(0, 18);
+// const isSenior = makeBetweenFunc(65, 120);
+//
+// console.log(isChild(18))
+// console.log(isSenior(65))
+
+// * 216 Defining Methods
+
+// const myMath = {
+//     PI: 3.14159,
+//     square : function (num){
+//         return num * num;
+//     },
+//     cube: function (num){
+//         return num ** 3;
+//     }
+// }
+//
+// console.log(myMath.square(2))
+// console.log(myMath.cube(2))
+
+// *Short hand - skip the function keyword
+
+// const myMath = {
+//     PI: 3.14159,
+//     square(num){
+//         return console.log(num * num);
+//     },
+//     cube(num){
+//         return console.log(num ** 3);
+//     }
+// }
+//
+// myMath.square(2)
+// myMath.cube(2)
+
+//! QUIZ
+
+// const square = {
+//     area(side){
+//         return side*side
+//     },
+//     perimeter(side){
+//         return side * 4
+//     }
+// }
+//
+// console.log(square.area(10))
+// console.log(square.perimeter(10))
+
+//* 217. The Mysterious Keyword 'this'
+
+//* Example 1
+
+// const person = {
+//     first: 'Robert',
+//     last: 'Herjavec',
+//     fullName(){
+//         return `${this.first} ${this.last}`
+//     }
+// }
+//
+// console.log(person.fullName());
+// console.log(person.last = "Plant");
+// console.log(person.fullName());
+
+//* Example 2
+
+// const cat = {
+//     name: 'Blue Steele',
+//     color: 'grey',
+//     breed: 'scottish fold',
+//     meow (){
+//         console.log(`${this.name} says Meow!`)
+//     }
+// }
+//
+// cat.meow()
+
+//! The value of *THIS* depends on the invocation content of the func it is used in.
+
+// const cat = {
+//     name: 'Blue Steele',
+//     color: 'grey',
+//     breed: 'scottish fold',
+//     meow (){
+//         console.log('This is', this)
+//         console.log(`${this.name} says Meow!`)
+//     }
+// }
+
+// cat.meow()
+
+// const meow2 = cat.meow();
+// meow2();
+
+//! QUIZ
+
+// let hen = {
+//     name: 'Helen',
+//     eggCount: 0,
+//     layAnEgg (){
+//         this.eggCount += 1;
+//         return 'EGG'
+//     }
+// }
+//
+// console.log(hen.name)
+// console.log(hen.eggCount)
+// console.log(hen.layAnEgg())
+// console.log(hen.layAnEgg())
+// console.log(hen.eggCount)
+
+// * 218. Using Try/Catch. If you have a try you NEED a catch.
+
+// * Example 1
+// try{
+//     hello.toUpperCase();
+// } catch {
+//     console.log('ERROR!')
+// }
+
+// * Example 2
+
