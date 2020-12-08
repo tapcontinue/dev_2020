@@ -602,6 +602,7 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 // console.log(greet('Luna'))
 
 //* 224. Arrow Function Implicit Returns
+//* - only work with 1 value very clearly just a single expression to be evaluated & returned
 
 //* Ex 0 - regular function expression
 // const isEven = function (num){
@@ -617,3 +618,53 @@ console.log(`The sum is ${sum} and the answer is ${answer}`)
 // const isEven = num => num % 2 === 0;
 // console.log(isEven(5))
 
+// *Ex 3 - normal size
+// const rollDie = () => {
+//  return Math.floor(Math.random()* 6) + 1;
+// }
+// console.log(rollDie())
+
+// *Ex 3 - shrunk
+// const rollDie = () =>(
+//     Math.floor(Math.random() * 6) + 1
+// )
+
+// *Ex 4 - Ultra tiny (same as 2 - 1)
+
+// const add = (a, b) => console.log(a + b)
+// add(41, 23)
+
+//* 225. Arrow Functions Wrapup
+
+const movies = [
+    {
+        title: 'Amadeus',
+        score: 99
+    },
+    {
+        title: 'Stand By Me',
+        score: 85
+    },
+    {
+        title: 'Parasite',
+        score: 100
+    },
+    {
+        title: 'Alien',
+        score: 90
+    },
+
+]
+
+//* regular version:
+// const newMovies = movies.map(function (movie){
+//     return `${movie.title} - ${movie.score/10}`
+// })
+
+//* arrow version
+// const newMovies = movies.map(movie =>(
+//     `${movie.title} - ${movie.score / 10}`
+// ))
+// console.log(newMovies)
+
+//* 226. setTimeout and setInterval
