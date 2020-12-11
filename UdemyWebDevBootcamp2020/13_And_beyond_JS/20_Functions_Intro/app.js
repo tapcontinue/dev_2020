@@ -1,4 +1,4 @@
-//* 206. Arguments Intro
+//! 206. Arguments Intro
 /*
 function singSong() {
     console.log("DO");
@@ -12,7 +12,7 @@ function greet(firstName, lastName) {
 
 */
 
-//* 207. Functions With Multiple Arguments
+//! 207. Functions With Multiple Arguments
 /*
 function repeat(str, numTimes) {
     let result = '';
@@ -30,7 +30,7 @@ function add(x, y) {
 }
 */
 
-//* 208. The Return Keyword
+//! 208. The Return Keyword
 
 
 //*  Ex 1
@@ -185,9 +185,9 @@ console.log(returnDay(8))*/
 
 
 
-//* 210. Function Scope
+//! 210. Function Scope
 
-//* 212. Lexical Scope - nested or inner func has access same stuff as parent or g parent
+//! 212. Lexical Scope - nested or inner func has access same stuff as parent or g parent
 
 /*function bankRobbery() {
     const heroes = ['Spider-Man', 'Wolverine', 'Black Panther', 'Bat-woman'];
@@ -204,7 +204,7 @@ console.log(returnDay(8))*/
 
 bankRobbery()*/
 
-//* 213. Function Expressions another way to def a fun
+//! 213. Function Expressions another way to def a fun
 
 //*  Function statement:
 /*function add(x, y) {
@@ -222,7 +222,7 @@ square(9);*/
 
 //! functions are values in JS
 
-//* 214. Higher Order Functions
+//! 214. Higher Order Functions
 //* function that accept functions as arguments
 
 //*  Ex 1
@@ -252,7 +252,7 @@ function rollDie(){
 }
 callTwice(rollDie)*/
 
-//* 215. Returning Functions
+//! 215. Returning Functions
 
 //* EX 1
 /*function makeMysteryFunc() {
@@ -347,7 +347,7 @@ myMath.cube(2)*/
 console.log(square.area(10))
 console.log(square.perimeter(10))*/
 
-//* 217. The Mysterious Keyword 'this'
+//! 217. The Mysterious Keyword 'this'
 
 //* Example 1
 
@@ -410,7 +410,7 @@ console.log(hen.layAnEgg())
 console.log(hen.layAnEgg())
 console.log(hen.eggCount)*/
 
-//*  218. Using Try/Catch. If you have a try you NEED a catch.
+//!  218. Using Try/Catch. If you have a try you NEED a catch.
 
 //*  Example 1
 /*try{
@@ -573,7 +573,7 @@ console.log(cleanNames)
 
 //Coming soon
 
-//* 223. Intro to Arrow Functions
+//! 223. Intro to Arrow Functions
 
 //* Example 1: More compact, same thing.
 /*
@@ -613,7 +613,7 @@ const greet = (name) => {
 console.log(greet('Luna'))
 */
 
-//* 224. Arrow Function Implicit Returns
+//! 224. Arrow Function Implicit Returns
 //* - only work with 1 value very clearly just a single expression to be evaluated & returned
 
 //* Ex 0 - regular function expression
@@ -648,7 +648,7 @@ console.log(rollDie())
 /*const add = (a, b) => console.log(a + b)
 add(41, 23)*/
 
-//* 225. Arrow Functions Wrapup
+//! 225. Arrow Functions Wrapup
 
 /*const movies = [
     {
@@ -681,7 +681,7 @@ add(41, 23)*/
 ))
 console.log(newMovies)*/
 
-//* 226. setTimeout and setInterval - Does not seem practical at this time.
+//! 226. setTimeout and setInterval - Does not seem practical at this time.
 
 //* Ex 1
 /*setTimeout(() => {
@@ -693,7 +693,7 @@ console.log(newMovies)*/
     console.log(Math.random())
 }, 2000)*/
 
-//*  227. The filter Method - makes new array when all elements pass a test
+//!  227. The filter Method - makes new array when all elements pass a test
 
 // * Example 1
 /*const nums = [9,8,7,6,5,4,3,2,1];
@@ -705,3 +705,111 @@ const smallNums = nums.filter(n => n < 5);
 console.log(smallNums)*/
 
 //* Example 2
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+//
+// numbers.filter(n =>{
+//     return n < 10
+// })
+
+//* Example 3
+
+/*const movies = [
+    {
+        title: 'Amadeus',
+        score: 99,
+        year: 1984
+    },
+    {
+        title: 'Sharknado',
+        score: 35,
+        year: 2013
+    },
+    {
+        title: '13 Going On 30',
+        score: 70,
+        year: 2004
+    },
+    {
+        title: 'Stand By Me',
+        score: 85,
+        year: 1986
+    },
+    {
+        title: 'Waterworld',
+        score: 62,
+        year: 1995
+    },
+    {
+        title: 'Jingle All The Way',
+        score: 71,
+        year: 1996
+    },
+    {
+        title: 'Parasite',
+        score: 95,
+        year: 2019
+    },
+    {
+        title: 'Notting Hill',
+        score: 77,
+        year: 1999
+    },
+    {
+        title: 'Alien',
+        score: 90,
+        year: 1979
+    },
+]*/
+
+//* Normal
+/*const goodMovies = movies.filter(movie =>{
+    return movie.score > 80
+})*/
+
+//* Implicit return
+/*const goodMovies = movies.filter(m => m.score > 80)
+const badMovies = movies.filter(m => m.score < 70)
+const recentMovies = movies.filter(m => m.year > 2000)
+
+console.log(goodMovies, badMovies, recentMovies)*/
+
+// * Chain 'em together.
+
+//* Ex 1
+// movies.filter(m => m.score > 80).map(m => m.title);
+
+//* Ex 2 - When it gets too long:
+
+/*
+movies
+    .filter(m => m.score > 80)
+    .map(m => m.title);
+*/
+
+//!QUIZ
+
+// const usernames = ['mark', 'staeysmom1978', 'q29832128238983', 'carrie98', 'MoanaFan']
+
+//* My version based off MDN
+// const validUserNames = usernames.filter(user => user.length < 10);
+
+//* The solution - I need to insert usernames
+// const validUserNames = usernames => usernames.filter(user => user.length < 10)
+
+//! 228. Some & Every Methods - boolean methods
+
+//* EVERY - True if ALL of the array elements pass the test
+// const exams = [80,98,92,78,77,90,89,84,81,77]
+// exams.every(score => score >= 75);
+
+//* SOME - True if ANY of the array elements pass the test
+// const exams = [0,0,0,0,0,0,0,0,0,77]
+// exams.some(score => score >= 75);
+
+//! QUIZ
+const numbers = [1, 2, 3]
+
+const allEvens = arr => arr.every(num => num % 2 ===0)
+
+console.log(allEvens())
